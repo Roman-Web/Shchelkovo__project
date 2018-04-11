@@ -1,0 +1,707 @@
+@import 'vars.sass'
+@import 'mixins.sass'
+@import 'fonts.sass'
+
+
+// Минимальная нормализация стилей
+
+*
+	box-sizing: border-box
+	outline: none
+	border: none
+	font-weight: 400
+	letter-spacing: 0.25px
+	padding: 0
+	margin: 0
+	&:hover, &:active, &:focus
+		outline: none
+		border: none
+html,body
+	height: 100%
+	font-size: 15px
+	overflow: auto
+	overflow-x: hidden
+	color: #000
+	position: relative
+	margin: 0 !important
+li
+	list-style-type: none
+	display: block
+a
+	text-decoration: none
+	display: inline-block
+	color: inherit
+p,li,nav
+	>a
+		&:hover, &:active, &:focus
+			outline: none
+			border: none
+img
+	max-width: 100%
+	height: auto
+picture
+	display: block
+	source
+		display: block
+	img
+		display: block
+
+section
+	position: relative
+	display: block
+	height: auto
+hr
+	height: 1px
+	width: 100%
+	border: none
+	color: #ebebeb
+	background-color: #ebebeb
+	margin-top: 6px
+	margin-bottom: 22px
+button
+	cursor: pointer
+button::-moz-focus-inner
+	padding: 0
+	border: none
+
+
+// Базис стилей
+.container
+	max-width: 1170px
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+
+
+// Типографика под макет
+p
+	font-size: 15px
+	letter-spacing: 0.15px
+	font-family: msc300
+	margin-bottom: 24px
+	line-height: 28px
+	strong
+		font-family: msc700
+
+
+// Общие элементы
+.big-orange-button
+	width: 225px
+	height: 62px
+	box-shadow: 0 10px 32px rgba(242, 137, 65, 0.66)
+	background-color: $accent-color
+	color: #fff
+	letter-spacing: 0.19px
+	font-family: msc900
+	font-size: 19px
+	+flex
+	+aic
+	+jcc
+	+transition-fast
+	&:hover
+		background-color: #000
+		box-shadow: 0 10px 32px rgba(0, 0, 0, 0.66)
+
+footer
+	margin-top: 130px
+	background-color: #f0f0f0
+
+.footer__offer
+	width: 100%
+	position: relative
+	padding-top: 52px
+	padding-bottom: 80px
+
+.footer__img
+	position: absolute
+	right: 0
+	top: -53px
+
+.footer__offer__h3
+	letter-spacing: 0.25px
+	font-family: msc900
+	font-size: 25px
+	line-height: 35px
+
+.footer__offer__call-text
+	font-family: msc300
+	font-size: 17px
+	letter-spacing: 0.17px
+
+.footer__offer__calling
+	max-width: 530px
+	+flex
+	+jcsb
+	+aic
+
+.call_to_call
+	display: block
+	font-family: msc300
+	font-size: 17px
+	letter-spacing: 0.17px
+
+.footer__offer__number
+	font-family: msc900
+	font-size: 25px
+	letter-spacing: 0.25px
+	display: block
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 19px
+		height: 19px
+		display: block
+		+bgr
+		background-position: center center
+		background-image: url(../img/phone_big-icon.png)
+		left: -33px
+		top: 5px
+
+.footer-contacts-line
+	height: 106px
+	border-top: 1px solid #e3e3e3
+	border-bottom: 1px solid #e3e3e3
+	+flex
+	+jcsb
+	+aic
+
+.footer-contacts__item
+	font-family: msc900
+	font-size: 15px
+	letter-spacing: 0.15px
+	padding-left: 21px
+	margin-right: 31px
+	+bgr
+	+bgleft
+	&:last-child
+		margin-right: 0
+
+.footer-contacts__item--mail
+	background-image: url(../img/mail-icon.png)
+
+.footer-contacts__item--phone
+	background-image: url(../img/phone-icon.png)
+
+.copyright
+	height: 60px
+	+flex
+	+jcc
+	+aic
+
+.copyright__text
+	margin-bottom: 0
+	font-family: msc100
+	font-size: 13px
+	letter-spacing: 0.13px
+
+.copyright__link
+	color: $accent-color
+	&:hover
+		text-decoration: underline
+
+.template-page
+	.beton-header
+		height: 320px
+
+.beton-header
+	+bgr
+	background-position: center center
+	background-size: cover
+	position: relative
+	z-index: 2
+
+.header-line
+	+flex
+	+jcsb
+	+aic
+	border-bottom: 1px solid #898989
+	height: 80px
+	z-index: 3
+
+.header-links,.header-contacts
+	+flex
+	+aic
+	+jcsb
+	width: 490px
+
+.header-links__item
+	font-family: msc500
+	color: #fff
+	letter-spacing: 0.14px
+	font-size: 14px
+	+transition-fast
+	&:hover
+		color: $accent-color
+		text-decoration: underline
+
+.header-contacts__item
+	font-family: msc500
+	color: #fff
+	font-size: 15px
+	letter-spacing: 0.14px
+	padding-left: 21px
+	+bgr
+	+bgleft
+	background-image: url(../img/phone-icon.png)
+
+.header-contacts__item--link
+	letter-spacing: 0.15px
+	font-family: msc900
+	font-size: 15px
+	color: $accent-color
+	padding: 12px 0 10px
+	border-bottom: 2px solid $accent-color
+	cursor: pointer
+	+transition
+	&:hover
+		color: #fff
+		border-bottom: 2px solid transparent
+
+// Стили для шаблонов
+.template__title-wrap
+	position: absolute
+	padding-top: 66px
+	top: 0
+	bottom: 0
+	width: 100%
+	z-index: -1
+	+flex
+	+aic
+	+jcc
+
+.template__title-block
+	width: 760px
+	text-align: center
+
+.template__h1
+	color: #fff
+	font-family: Oswald-Bold
+	font-size: 30px
+	text-transform: uppercase
+	letter-spacing: 0.69px
+	line-height: 47px
+	margin-bottom: 22px
+	&:before
+		content: ''
+		display: block
+		margin: 0 auto 20px
+		width: 60px
+		height: 3px
+		background-color: $accent-color
+
+.header-template__site-links
+	margin: 0 auto
+	border: 1px solid #898989
+	height: 60px
+	+flex
+
+.header-site-links__item
+	color: #fff
+	font-family: Oswald-Bold
+	font-size: 16px
+	width: calc(100% / 3)
+	text-align: center
+	text-transform: uppercase
+	border-right: 1px solid #898989
+	+transition-fast
+	+flex
+	+aic
+	+jcc
+	&:last-child
+		border-right: none
+	&:hover
+		background-color: $accent-color
+
+
+.header-site-links__item--active
+	background-color: $accent-color
+
+
+.template-article__wrap
+	padding-top: 100px
+	p
+		font-size: 15px
+		font-family: msc300
+		line-height: 24px
+		letter-spacing: 0.23px
+	b
+		font-family: msc900
+
+.template__h2
+	color: #000000
+	font-family: Oswald
+	font-size: 24px
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: initial
+	margin-bottom: 24px
+	&:before
+		content: ''
+		display: block
+		margin: 0 0 20px
+		width: 35px
+		height: 3px
+		background-color: $accent-color
+
+.text-elements__wrap
+	max-width: 800px
+	margin: 0 auto
+	padding-bottom: 10px
+
+
+.text-link
+	font-family: msc900
+	color: $accent-color
+
+
+
+.text__h3
+	font-family: msc900
+	font-size: 20px
+	letter-spacing: 0.3px
+	margin-bottom: 4px
+
+.text__ul
+	padding-left: 30px
+	li
+		position: relative
+		font-family: msc300
+		font-size: 14px
+		line-height: 24px
+		letter-spacing: 0.23px
+		margin-bottom: 4px
+		list-style-type: circle
+		&:before
+			content: '- '
+			position: absolute
+			color: $accent-color
+			font-size: 18px
+			left: -20px
+			top: -1px
+
+
+
+
+// Виджет звонка
+
+.widget
+	bottom: 30px
+	right: 30px
+	position: fixed
+	z-index: 2
+	outline: none
+	display: block
+
+.circle-fill
+	box-sizing: content-box
+	-webkit-box-sizing: content-box
+	background-color: #d88948
+	width: 100px
+	height: 100px
+	bottom: 0px
+	right: 35px
+	position: absolute
+	-webkit-border-radius: 100%
+	-moz-border-radius: 100%
+	border-radius: 100%
+	border: 2px solid transparent
+	-webkit-animation: circle-fill-anim 2.3s infinite ease-in-out
+	-moz-animation: circle-fill-anim 2.3s infinite ease-in-out
+	-ms-animation: circle-fill-anim 2.3s infinite ease-in-out
+	-o-animation: circle-fill-anim 2.3s infinite ease-in-out
+	animation: circle-fill-anim 2.3s infinite ease-in-out
+	-webkit-transition: all .5s
+	-moz-transition: all .5s
+	-o-transition: all .5s
+	transition: all 0.5s
+	outline: none
+
+.img-circle
+	background-color: #d88948
+	box-sizing: content-box
+	-webkit-box-sizing: content-box
+	width: 72px
+	height: 72px
+	bottom: 14px
+	right: 49px
+	position: absolute
+	-webkit-border-radius: 100%
+	-moz-border-radius: 100%
+	border-radius: 100%
+	border: 2px solid transparent
+	opacity: .7
+	outline: none
+
+.img-circleblock
+	box-sizing: content-box
+	-webkit-box-sizing: content-box
+	width: 72px
+	height: 72px
+	background-image: url(../img/widget.png)
+	background-position: center center
+	background-repeat: no-repeat
+	animation-name: tossing
+	-webkit-animation-name: tossing
+	animation-duration: 1.5s
+	-webkit-animation-duration: 1.5s
+	animation-iteration-count: infinite
+	-webkit-animation-iteration-count: infinite
+	outline: none
+
+.img-circle:hover
+	opacity: 1
+
+@keyframes pulse
+	0%
+		transform: scale(0.9)
+		opacity: 1
+	50%
+		transform: scale(1)
+		opacity: 1
+	100%
+		transform: scale(0.9)
+		opacity: 1
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-transform: scale(0.95)
+		opacity: 1
+	50%
+		-webkit-transform: scale(1)
+		opacity: 1
+	100%
+		-webkit-transform: scale(0.95)
+		opacity: 1
+
+@keyframes tossing
+	0%
+		transform: rotate(-8deg)
+	50%
+		transform: rotate(8deg)
+	100%
+		transform: rotate(-8deg)
+
+@-webkit-keyframes tossing
+	0%
+		-webkit-transform: rotate(-8deg)
+	50%
+		-webkit-transform: rotate(8deg)
+	100%
+		-webkit-transform: rotate(-8deg)
+
+@-moz-keyframes circle-anim
+	0%
+		-moz-transform: rotate(0deg) scale(0.5) skew(1deg)
+		opacity: .1
+		-moz-opacity: .1
+		-webkit-opacity: .1
+		-o-opacity: .1
+	30%
+		-moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .5
+		-moz-opacity: .5
+		-webkit-opacity: .5
+		-o-opacity: .5
+	100%
+		-moz-transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .6
+		-moz-opacity: .6
+		-webkit-opacity: .6
+		-o-opacity: .1
+
+@-webkit-keyframes circle-anim
+	0%
+		-webkit-transform: rotate(0deg) scale(0.5) skew(1deg)
+		-webkit-opacity: .1
+	30%
+		-webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+		-webkit-opacity: .5
+	100%
+		-webkit-transform: rotate(0deg) scale(1) skew(1deg)
+		-webkit-opacity: .1
+
+@-o-keyframes circle-anim
+	0%
+		-o-transform: rotate(0deg) kscale(0.5) skew(1deg)
+		-o-opacity: .1
+	30%
+		-o-transform: rotate(0deg) scale(0.7) skew(1deg)
+		-o-opacity: .5
+	100%
+		-o-transform: rotate(0deg) scale(1) skew(1deg)
+		-o-opacity: .1
+
+@keyframes circle-anim
+	0%
+		transform: rotate(0deg) scale(0.5) skew(1deg)
+		opacity: .1
+	30%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .5
+	100%
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .1
+
+@-moz-keyframes circle-fill-anim
+	0%
+		-moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50%
+		-moz-transform: rotate(0deg) -moz-scale(1) skew(1deg)
+		opacity: .2
+	100%
+		-moz-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+@-webkit-keyframes circle-fill-anim
+	0%
+		-webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50%
+		-webkit-transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .2
+	100%
+		-webkit-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+@-o-keyframes circle-fill-anim
+	0%
+		-o-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50%
+		-o-transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .2
+	100%
+		-o-transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+@keyframes circle-fill-anim
+	0%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50%
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .2
+	100%
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+
+// Стили для модальных форм
+
+// Согласие на обработку данных
+.personal-text
+	font-size: 9px
+	letter-spacing: 0.09px
+	font-family: msc300
+	>a
+		text-decoration: underline
+		font-family: msc500
+		letter-spacing: 0.09px
+
+// Стили для модальных окон
+
+.modals-close-cross
+	height: 12px
+	width: 12px
+	background: url(../img/close.png) no-repeat center center
+	position: absolute
+	top: 22px
+	right: 22px
+	cursor: pointer
+	transform: rotate(0deg)
+	transition: all 0.5s
+	z-index: 50
+	&:hover
+		transform: rotate(180deg)
+
+.modal-callback
+	max-width: 420px
+	background-color: #fff
+	margin: 0 auto
+	position: relative
+
+.modal-callback__form
+	width: 420px
+	border: 8px solid #ff8101
+	padding-top: 40px
+	padding-left: 48px
+	padding-bottom: 42px
+
+
+.modal-callback__h3
+	letter-spacing: 0.25px
+	font-family: msc900
+	font-size: 25px
+	margin-bottom: 14px
+
+.modal-callback__text
+	letter-spacing: 0.15px
+	font-size: 15px
+	line-height: 20px
+	font-family: msc300
+	max-width: 300px
+
+.modal-callback-link
+	height: 45px
+	letter-spacing: 0.15px
+	font-size: 15px
+	font-family: msc900
+	padding: 12px 36px 15px
+
+.modal-callback__label,.modal-callback__input
+	width: 100%
+	max-width: 310px
+	display: block
+	padding-left: 20px
+
+.modal-callback__label
+	letter-spacing: 0.12px
+	font-size: 12px
+	font-family: msc300
+	margin-bottom: 10px
+
+.modal-callback__input
+	padding-bottom: 10px
+	border-bottom: 1px solid #ff8203
+	font-family: msc900
+	margin-bottom: 30px
+
+.modal-callback__input--phone
+	margin-bottom: 10px
+
+::-webkit-input-placeholder
+	color: #000
+	opacity: 0.55
+	font-size: 13px
+	font-style: italic
+
+::-moz-placeholder
+	color: #000
+	opacity: 0.55
+	font-size: 13px
+	font-style: italic
+
+::-ms-input-placeholder
+	color: #000
+	opacity: 0.55
+	font-size: 13px
+	font-style: italic
+
+
+.modal-callback__button
+	height: 45px
+	background-image: $gradient
+	display: inline-block
+	padding: 12px 36px 15px
+	text-align: center
+	color: #fff
+	font-family: msc900
+	letter-spacing: 0.15px
+	font-size: 15px
+	border-radius: 25px
+	box-shadow: 0 29px 35px rgba(254, 129, 2, 0.23)
+	+transition
+	&:hover
+		box-shadow: none

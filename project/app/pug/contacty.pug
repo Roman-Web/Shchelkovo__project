@@ -1,0 +1,63 @@
+extends common_parts/template.pug
+
+block vars
+	- var page_name = "contacty"
+	- var title__h1 = "Контакты"
+
+	- var title = "Контактная информация Лесстрон";
+	- var description = "Адрес и телефон компании, обращайтесь";
+	- var keywords = "контакты Лесстрон";
+
+	- var beton_class = "template-page template-page--contacty"
+
+block header
+	include common_parts/header__template.pug
+
+
+block main
+
+	.template-article__wrap
+		.container
+			.map-block__wrap
+				#beton-map.map-block
+
+				.cotnacts-section__contacts
+					h2.template__h2 Адреса и телефоны
+					.cotnacts-section__item
+						p.
+							<b>Юридический адрес:</b><br>
+							141070, Московская область, г. Королев,  ул. Пионерская, д.1
+					.cotnacts-section__item
+						p.
+							<b>Адрес производства бетона (для самовывоза):</b><br>
+							141282, Московская область, г. Ивантеевка, ул. Толмачева, д.80
+					.cotnacts-section__item
+						p
+							<b>Консультации и заказ бетона:</b><br>
+							span.contacts__number_e-mail 8 (499) 641-10-20
+							span.contacts__number_e-mail info@lesstron.com
+
+
+
+
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	script.
+		ymaps.ready(function () {
+				var myMap = new ymaps.Map('beton-map', {
+					center: [55.9141,37.7988],
+					zoom: 16
+				}, 
+				{
+					searchControlProvider: 'yandex#search'
+				});
+				var zoomControl = new ymaps.control.ZoomControl({
+					options: {
+							size: "large"
+					}
+				});
+			myMap.controls.add(zoomControl);
+		var myPlacemark = new ymaps.Placemark([55.9145,37.7974], {}, {
+						preset: 'islands#redDotIcon'
+				});
+			myMap.geoObjects.add(myPlacemark);
+		});

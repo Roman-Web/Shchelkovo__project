@@ -1,0 +1,35 @@
+mixin hidden__input(form_subject)
+	input(type="hidden" name="project_name" value="Сайт по Бетону - Щелково")
+	input(type="hidden" name="admin_email" value="info@lesstron.com")
+	input(type="hidden" name="form_subject" value="Пришла заявка")
+
+
+mixin personal_data
+	p.personal-text * Оставляя заявку вы даете <a href="agreement.html" target="blank" class="modal_link">согласие на обработку персональных данных</a>
+
+
+mixin picture_png(img, alt)
+	source(srcset="img_webp/" + img + ".webp", type="image/webp")
+	img(src="img/" + img + ".png", alt= alt)
+
+mixin picture_jpg(img, alt)
+	source(srcset="img_webp/" + img + ".webp", type="image/webp")
+	img(src="img/" + img + ".jpg", alt= alt)
+
+mixin picture_gallery(img,alt,link)
+	a(href= link).gallery-img__link
+		picture
+			source(srcset="img_webp/gallery/" + img + ".webp", type="image/webp")
+			img(src="img/gallery/" + img + ".jpg", alt= alt)
+
+
+//- Миксин для Меню
+mixin mainMenuItem(name, href)
+	a(href= href)&attributes(attributes).header-site-links__item= name
+				
+-var mainList = [{name: "Бетон в Щелково", href:"index.html"}, {name: "Цемент", href:"cement.html"}, { name: "Битумная мастика", href:"bitumnaja-mastika.html"}];
+
+//- Миксин для стилей адаптивности
+mixin styles
+	link(rel="stylesheet" media="(min-width: 1371px) and (max-width: 1950px)" href="https://betonny-sait.ru/css/1920/1920_" + page_name + ".css")
+	link(rel="stylesheet" media="(min-width: 1170px) and (max-width: 1370px)" href="https://betonny-sait.ru/css/1360/1360_" + page_name + ".css")

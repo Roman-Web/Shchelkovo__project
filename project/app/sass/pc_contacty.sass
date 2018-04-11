@@ -1,0 +1,35 @@
+// Стили для страницы Контакты
+.template-page--contacty
+	.beton-header
+		background-image: url(../../img/1360_bg_contacty.jpg)
+
+.map-block__wrap
+	+flex
+	+jcsb
+	+aic
+
+.map-block
+	width: calc(50% - 25px)
+	height: 510px
+
+.cotnacts-section__contacts
+	width: calc(50% - 25px)
+
+.contacts__number_e-mail
+	display: block
+	padding-left: 24px
+	+bgr
+	background-position: left center
+	line-height: 1
+	margin: 10px 0 16px
+	&:nth-child(3)
+		background-image: url(../../img/phone-icon.png)
+	&:nth-child(4)
+		background-image: url(../../img/mail-icon.png)
+
+.cotnacts-section__item
+	p
+		margin: 34px 0
+		>b
+			display: inline-block
+			margin-bottom: 10px

@@ -1,0 +1,26 @@
+include mixins.pug
+
+- var metrika = "45174849"
+- var metrika_big= yaCounter45174849
+- var metrika_id= 'id:45174849'
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		block vars
+		include head.pug
+		+styles
+
+	body(class= beton_class)
+		block header
+		block main
+
+		include footer.pug
+
+		//- libs Css and JS
+		include libs.pug
+		include modals.pug
+
+		script(src="js/common.js")
+
+		include counters.pug

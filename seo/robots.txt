@@ -1,0 +1,13 @@
+User-agent: *
+Allow: *.css
+Allow: *.js
+Allow: /
+
+Host: https://postavkabetona.ru
+Sitemap: https://postavkabetona.ru/sitemap.xml
+
+Disallow: /cgi-bin/
+Disallow: /cgi/
+Disallow: /agreement.html
+Disallow: /thanks.html
+Disallow: /private.html

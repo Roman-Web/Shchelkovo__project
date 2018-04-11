@@ -1,0 +1,83 @@
+extends common_parts/template.pug
+
+block vars
+	- var page_name = "dostavka"
+	- var title__h1 = "Доставка и оплата"
+
+	- var title = "Сроки и стоимость доставки стройматериалов";
+	- var description = "Информация по доставке - Лесстрон";
+	- var keywords = "информация по доставке";
+
+	- var beton_class = "template-page template-page--dostavka"
+
+block header
+	include common_parts/header__template.pug
+
+
+block main
+
+	.template-article__wrap
+		.text-elements__wrap
+			h2.template__h2 Организация доставки бетона и цемента
+			p.
+				Компания «Лесстрон» предоставляет собственную автотехнику для доставки бетона, в том числе и на труднодоступные участки в Пушкино. В автопарке имеются автобетоносмесители объемом 
+				<b>от 7 до 12 м<sup><small>3</sup></small></b>. Минимальный заказ продукции – <b>от 3 м<sup><small>3</sup></small></b>, однако в этом случае доставка будет рассчитана на минимальный объем <b>7 м<sup><small>3</sup></small></b>.
+			p.
+				Оплата продукции производится как наличными, так и безналичными деньгами. Счет мы вышлем 
+				по почте после осуществления заказа.
+			p.
+				Возможен самовывоз. Доставка рассчитывается в зависимости от направления (Горьковское или Ярославское) + расстояние.
+			h3.text__h3 Обратите внимание!
+			ul.text__ul
+				li Объем 1-го автобетоносмесителя: 7-12 метра3
+				li Минимальный заказ: 3 метра3 - оплата происходит за 7 метров3
+				li Время разгрузки – 1 час
+			p.
+				Для доставки бетона в Щелково, мы используем специализированный автотранспорт из своего автопарка, благодаря чему стоимость а доставку – минимальна. Компания Лесстрон гарантирует быструю доставку в оговоренное место и время.
+
+
+		.beton-template-price__table.beton-template-price__table--dostavka
+			.price-template-table__top-row
+				span.price-template-table__column-title Расстояние
+				span.price-template-table__column-title Цена за перевозку м<sup><small>3</sup></small> груза
+
+			.price-template-table__row
+				span.price-template-table__row-value до 10 км
+				span.price-template-table__row-value 350 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 15 км
+				span.price-template-table__row-value 400 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 20 км
+				span.price-template-table__row-value 450 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 25 км
+				span.price-template-table__row-value 500 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 30 км
+				span.price-template-table__row-value 550 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 35 км
+				span.price-template-table__row-value 600 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 40 км
+				span.price-template-table__row-value 650 руб.
+
+			.price-template-table__row
+				span.price-template-table__row-value до 50 км
+				span.price-template-table__row-value договорная
+
+			.template-promo-block
+				.promo-text__wrap
+					h3.promo__h3 Вопросы или заказ цемента:
+					.promo__contacts
+						span.promo__contacts__item 8-499-641-10-20
+						span.promo__contacts__item info@lesstron.com
+
+				a(href="#").big-orange-button Заказать цемент

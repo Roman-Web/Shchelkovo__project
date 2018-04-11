@@ -1,0 +1,102 @@
+// Стили для страницы Цемент
+.template-page--cement
+	.beton-header
+		background-image: url(../../img/1360_bg_cement.jpg)
+
+
+.beton-template-price__table
+	margin: 50px auto 0
+	width: 946px
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07)
+	background-color: #ffffff
+
+.price-template-table__top-row,.price-template-table__row
+	position: relative
+	width: 100%
+	padding: 0 70px
+	+flex
+	+jcsb
+	+aic
+	font-family: msc300
+	min-height: 70px
+
+.price-template-table__top-row
+	font-size: 18px
+	letter-spacing: 0.18px
+	&:after
+		content: ''
+		display: block
+		height: 1px
+		background-color: #e8e8e8
+		position: absolute
+		bottom: 0
+		left: 70px
+		right: 70px
+
+.price-template-table__row
+	font-size: 18px
+	letter-spacing: 0.18px
+	&:nth-child(2n+1)
+		background-color: #f6f6f6
+
+.price-template-table__column-title
+	display: block
+	width: 50%
+	flex: 1
+	font-family: msc900
+	&:nth-child(2)
+		text-align: right
+	&:nth-child(3)
+		text-align: right
+
+.price-template-table__row-value
+	display: block
+	width: 50%
+	flex: 1
+	font-family: msc300
+	padding: 14px 0
+	&:nth-child(2)
+		flex: 2
+		font-size: 16px
+		text-align: right
+		max-width: 340px
+	&:nth-child(3)
+		text-align: right
+
+
+.template-promo-block
+	width: 806px
+	margin: 48px auto 0
+	border-top: 1px solid #e8e8e8
+	padding-top: 30px
+	padding-bottom: 50px
+	+flex
+	+jcsb
+
+.promo__contacts
+	width: 486px
+	flex: none
+	+flex
+	+jcsb
+
+.promo__h3
+	color: #000000
+	font-family: msc900
+	font-size: 23px
+	letter-spacing: 0.23px
+	line-height: 29px
+	margin-bottom: 14px
+
+.promo__contacts__item
+	display: inline-block
+	color: #000000
+	font-family: msc900
+	font-size: 20px
+	letter-spacing: 0.23px
+	padding-left: 34px
+	+bgr
+	background-position: left center
+	&:nth-child(1)
+		background-image: url(../../img/phone-big.png)
+	&:nth-child(2)
+		background-image: url(../../img/mail-big.png)

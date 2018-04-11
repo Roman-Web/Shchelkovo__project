@@ -1,0 +1,29 @@
+header.beton-header
+	.container
+		.header-line
+
+
+			.header-links
+
+				a(href="index.html").logo
+					img(src="img/logo.png", alt="Логотип Лесстрон")
+
+				a(href="dostavka.html").header-links__item Доставка и оплата
+				a(href="contacty.html").header-links__item Контакты
+
+
+			.header-contacts
+				span.header-contacts__item 8 (499) 450-20-30
+				span.header-contacts__item 8 (967) 114-35-35
+				a(href="#callback").header-contacts__item--link.popup-js Заказать бетон
+
+	.template__title-wrap
+		.template__title-block
+			h1.template__h1= title__h1
+
+			.header-template__site-links
+				each item, index in mainList
+					if pageId && index == pageId-1
+							+mainMenuItem(item.name, item.href)(class="header-site-links__item--active")
+					else
+							+mainMenuItem(item.name, item.href)

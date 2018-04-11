@@ -1,0 +1,48 @@
+body.thanks-page, html.thanks-page {
+	width: auto;
+	height: 100%;
+	font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+	overflow: auto;
+	min-width: 320px
+}
+body.thanks-page {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+.thanks__wrap {
+	text-align: center
+}
+.thanks__wrap h1{
+	margin-top: 30px;
+}
+.redirect__text {
+	font-size: 11px;
+	margin-top: 36px;
+	text-decoration: underline
+}
+@media screen and (max-width:480px) {
+	.thanks__wrap h1 {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.thanks__wrap p {
+		font-size: 12px
+	}
+	.thanks__wrap .redirect__text {
+		font-size: 10px;
+		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto
+	}
+}

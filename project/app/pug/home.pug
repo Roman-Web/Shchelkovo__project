@@ -1,0 +1,231 @@
+extends common_parts/template.pug
+
+block vars
+	- var pageId = 1
+	- var page_name = "home"
+
+	- var title = "Купить Бетон в Щелково с доставкой, цена производителя Лесстрон"
+	- var description = "Бетон и раствор в Щелково по цене производителя. Доставка до заказчика в коротие сроки"
+	- var keywords = "бетон Щелково, купить бетон, цена на бетон, бетон с доставкой, раствор Щелково, купить раствор, раствор цена"
+
+	- var beton_class = "home-page"
+
+
+block header
+	include common_parts/header.pug
+
+block main
+
+	main.beton__main
+		.article__container
+
+			.advantages-block.advantages-block--aic-jcsb
+
+				.frame-block
+					h4.advantages__h4 Своё промышленное производство!
+					p.advantages__text.
+						Обратившись к нам, заказчик получит столько бетона, сколько потребуется для выполнения плана на строительном объекте.
+				
+				.advantages__title
+					p.advantages__overhead Наши преимущества
+					h3.advantages__h3 Почему заказывать бетон в “Лесстроне” выгодно?
+
+
+		.article__container
+
+			.advantages-block.advantages-block__items-wrap.advantages-block__items--top-row
+
+				.advantages-block__item
+					img(src="img/icon-1.png", alt="#").advantages-block__item__icon
+					h5.advantages-block__item__title Работаем без посредников 
+					p.advantages-block__item__text.
+						Весь процесс, от создания бетонной смеси и до доставки бетона на объект выполняется исключительно нашими специалистами.
+
+				.advantages-block__item
+					img(src="img/icon-2.png", alt="#").advantages-block__item__icon
+					h5.advantages-block__item__title Логистика 
+					p.advantages-block__item__text.
+						Благодаря проработанным маршрутам, мы быстро <br>
+						и без задержек доставим бетон в любой район Пушкино
+
+				.advantages-block__item
+					img(src="img/icon-3.png", alt="#").advantages-block__item__icon
+					h5.advantages-block__item__title Качество
+					p.advantages-block__item__text.
+						Процесс изготовления любой марки бетона осуществляется под строгим контролем и в результате, заказчик получает продукцию высшего качества
+
+
+			.advantages-block.advantages-block__items-wrap--bottom-row
+
+				.advantages-block__item
+					img(src="img/icon-4.png", alt="#").advantages-block__item__icon
+					h5.advantages-block__item__title Ценовая политика
+					p.advantages-block__item__text.
+						У нас вы можете купить бетон по цене от 3000 руб. за м³, без наценок
+
+				.advantages-block__item
+					img(src="img/icon-5.png", alt="#").advantages-block__item__icon
+					h5.advantages-block__item__title Большие производственные объемы
+					p.advantages-block__item__text.
+						Благодаря нашим производственным мощностям, мы способны изготовить любое количество бетонного раствора, в указанные в заявке сроки
+
+
+		.beton-price-block
+			h2.beton-price__h2 Текущие цены на бетон
+
+			.beton-price__table
+
+				.price-table__top-row
+					span.price-table__column-title Марка (класс) бетона
+					span.price-table__column-title Гравий
+					span.price-table__column-title Гранит
+
+				.price-table__row
+					span.price-table__row-value М 100 (В 7,5)
+					span.price-table__row-value 2 950 руб./м3
+					span.price-table__row-value 3 880 руб./м3
+				.price-table__row
+					span.price-table__row-value М 150 (В 12,5)
+					span.price-table__row-value 3 040 руб./м3
+					span.price-table__row-value 3 980 руб./м3
+				.price-table__row
+					span.price-table__row-value М 200 (В 17,5)
+					span.price-table__row-value 3 130 руб./м3
+					span.price-table__row-value 4 080 руб./м3
+				.price-table__row
+					span.price-table__row-value М 250 (В 20)
+					span.price-table__row-value 3 310 руб./м3
+					span.price-table__row-value 4 270 руб./м3
+				.price-table__row
+					span.price-table__row-value М 300 (В 22,5)
+					span.price-table__row-value 3 400 руб./м3
+					span.price-table__row-value 4 360 руб./м3
+				
+				.price-table__row
+					span.price-table__row-value М 350 (В 25)
+					span.price-table__row-value 3 640 руб./м3
+					span.price-table__row-value 4 510 руб./м3
+				.price-table__row.price-table__row--bottom-line
+					span.price-table__row-value М 400 (В 30)
+					span.price-table__row-value 3 800 руб./м3
+					span.price-table__row-value 4 820 руб./м3
+
+
+				.promotion-block
+
+					.promotion-block__text-block
+						h3.promotion-block__h3 Акция только до 31 августа!
+						p.promotion-block__text.
+							Бетон М-300 с доставкой <span>по цене 3700 руб/м<sup>3</sup></span> при заказе не менее 7 м<sup>3</sup>
+					
+					a(href="#callback").big-orange-button.popup-js Заказать бетон
+
+		.assortiment__wrap
+			.assortiment-block
+				h2.assortiment-block__h2.
+					Ценовая политика <br>
+					нашей компании
+
+				.assortiment__text-block
+					p.
+						Сегодня многих строителей и строительных компаний волнует важный вопрос – <b>где можно купить бетон в Щелково по низким ценам?</b> Мы предлагаем купить бетон любой марки у нас всего от 3000 руб. за кубический метр! Автоматизированная система производства, большой автопарк, продуманная логистика – компания Лесстрон гарантирует доставку любого объема продукции по оговоренному времени и в необходимое место.
+					p.
+						В случае, если миксер вышел из строя в пути – мы сразу отправляем новый, дабы не сбить график доставки бетона. Для производства качественной продукции мы применяем пластификаторы и необходимые добавки для повышения характеристик готового бетона. За счет этого раствор не будет бояться мороза и других климатических воздействий.
+					p.assortiment__text-block--last-p.
+						Благодаря налаженной производственной и транспортной системе заказчик может существенно сэкономить. Наша компания делает все, чтобы клиенты остались довольны! Поэтому, <b>если вы хотите получить вовремя и по низкой цене качественный бетон – звоните!</b> Специалисты Лесстрон помогут оформить заявку, осуществят расчет необходимого объема продукции.
+					img(src="img/img_cement-2.jpg", alt="Строительный раствор").assortiment__picture
+			
+				.assortiment-block__post-text
+					p.assortiment-block__post-text__text.
+						Мы имеем огромный опыт поставки бетона, сохраняя наименьшую цену за куб – только у нас вы сможете не только заказать готовую смесь, но и существенно сэкономить.
+
+
+		.template-article__wrap
+			.text-elements__wrap
+				h2.template__h2 Бетон в Щелково с доставкой
+				p.
+					Чтобы не терять драгоценное время на приготовление необходимого раствора при постройке дома, рекомендуем Вам заказать бетон в Щелково с доставкой.
+				p.
+					Компания Лесстрон специализируется на доставке бетона и раствора – мы не только своевременно привезем ваш заказ в любую точку города, но и гарантируем качество нашего продукта, за счет многоступенчатого контроля качества бетона.
+				h3.text__h3 Почему выбирают нашу фирму?
+				p
+					| Причины, почему выбирают именно нас:
+					ul.text__ul
+
+						li В нашей компании огромный парк спецтехники, поэтому мы доставляем бетон в любое время – бесперебойная поставка очень важна при строительстве дома. При поломке автотранспорта мы делаем замену, не нарушая процесс поставки.
+
+						li <b>У нас большой завод, что позволяет готовить продукт в любых количествах.</b> Марка, при этом, не имеет значения.
+
+						li Наши водители хорошо знают дорогу и нюансы, которые могут возникнуть во время пути. Благодаря этому раствор доставят вовремя.
+
+						li Стоимость на все марки бетона у нас ниже, чем средние цены на рынке – это значительно сказывается на стоимости строительства в общем.
+
+						li Продукция нашего производства соответствует всем стандартам, установленным законодательством
+
+				p.
+					Один из важных факторов – вам не нужно доплачивать за скорость поставки бетона, так как водители компании Лесстрон знают короткие маршруты.
+				p.
+					Хотите купить бетон в Щелково? Обращайтесь в нашу компанию и вы получите качественный продукт по низкой цене!
+
+
+		.template-article__wrap
+			.text-elements__wrap
+				h2.template__h2 Цена (прайс-лист) на строительный раствор
+
+			.beton-price__table.beton-price__table--centered
+
+				.price-table__top-row
+					span.price-table__column-title Марка (класс) раствора
+					span.price-table__column-title Цена
+
+				.price-table__row
+					span.price-table__row-value М 100
+					span.price-table__row-value 2 510 руб./ куб. м
+
+				.price-table__row
+					span.price-table__row-value М 150
+					span.price-table__row-value 2 640 руб./ куб. м
+
+				.price-table__row
+					span.price-table__row-value М 200
+					span.price-table__row-value 2 800 руб./ куб. м
+
+				.price-table__row
+					span.price-table__row-value М 300
+					span.price-table__row-value 3 000 руб./ куб. м
+
+
+
+		.testimoials-block
+			h2.testimoials__h2 Что говорят о нас клиенты
+			.container
+				.testimoials__wrap
+
+					.testimoials__item
+						img(src="img/foto-1.png", alt="#").testimoials__picture
+						h5.testimoials__h5 ООО “ЗаводСтрой”
+						p.testimoials__text-content.
+							“Около полугода назад мы начали сотрудничать с компанией Лесстрон. Обратились к ним после того, как не получили от текущего поставщика положенного объема. Приятно удивило то, что недостающие 4 машины сразу отправили нам на объект.<br> 
+							Своей оперативностью они оправдали наши надежды на долгое сотрудничество. Делаем заказы теперь именно в этой компании, поскольку нам важна стабильная и бесперебойная поставка. Спасибо всей команде!”
+						p.testimoials__name Сергей Половнев
+
+					.testimoials__item
+						img(src="img/foto-2.png", alt="#").testimoials__picture
+						h5.testimoials__h5 ООО “ЗаводСтрой”
+						p.testimoials__text-content.
+							“Делал недавно у вас заказ готового раствора на заливку фундамента.<br>
+							Позвонил за день до самой заливки 
+							(хотя надо было конечно раньше, закрутился и затянул время).<br>
+							Но к удивлению доставка сработала оперативно и в назначенное время у меня уже проводилась отгрузка. 
+							Две машины приехали в 11.30, как и договаривались. Бетон хорошего качества, 
+							я им доволен.<br>
+							Компанию порекомендую своим знакомым, спасибо!”
+						p.testimoials__name Дамир Байрамов
+
+					.testimoials__item
+						img(src="img/foto-3.png", alt="#").testimoials__picture
+						h5.testimoials__h5 ООО “ЗаводСтрой”
+						p.testimoials__text-content.
+							“Около полугода назад мы начали сотрудничать с компанией Лесстрон. Обратились к ним после того, как не получили от текущего поставщика положенного объема. Приятно удивило то, что недостающие 4 машины сразу отправили нам на объект.<br> 
+							Своей оперативностью они оправдали наши надежды на долгое сотрудничество. Делаем заказы теперь именно в этой компании, поскольку нам важна стабильная и бесперебойная поставка. Спасибо всей команде!”
+						p.testimoials__name Алексей Морозов

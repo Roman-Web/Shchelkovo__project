@@ -1,0 +1,22 @@
+- var title = "Спасибо за заявку!";
+- var description = "Спасибо за заявку";
+- var keywords = "Спасибо за заявку";
+doctype html
+html(lang='ru')
+	include common_parts/head.pug
+	body.thanks-page
+		link(rel="stylesheet", href="css/thanks.css")
+
+		.thanks__wrap
+			img(src="img/logo_thanks.png", alt="#")
+			h1 Спасибо за заявку!
+			p.
+				Благодарим вас за доверие к нашей компании. <br>
+				Менеджер свяжется с вами в течение 10 минут!
+
+			p.redirect__text Вы будете перенаправлены на главную страницу сайта через 3 секунды
+
+		include common_parts/counters.pug
+
+		script(type='text/javascript').
+			setTimeout('window.history.back()',4000);

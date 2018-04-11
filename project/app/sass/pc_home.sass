@@ -1,0 +1,398 @@
+// Стили Главной страницы
+
+.beton__title-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 100%
+	padding-bottom: 20px
+	z-index: -1
+	+flex
+	+aic
+	+jcc
+
+.beton__h1
+	color: #fff
+	font-family: Oswald-Bold
+	font-size: 46px
+	text-transform: uppercase
+	letter-spacing: 0.69px
+	line-height: 1.1
+	margin-bottom: 80px
+	>small
+		font-size: 37px
+		letter-spacing: 0.37px
+	&:before
+		content: ''
+		display: block
+		margin: 0 auto 54px
+		width: 60px
+		height: 4px
+		background-color: $accent-color
+
+.beton__title-block
+	width: 760px
+
+.header__site-links
+	margin: 0 auto
+	border: 1px solid #898989
+	height: 60px
+	+flex
+
+.header-site-links__item
+	color: #fff
+	font-family: Oswald-Bold
+	font-size: 16px
+	width: calc(100% / 3)
+	text-align: center
+	text-transform: uppercase
+	border-right: 1px solid #898989
+	+transition-fast
+	+flex
+	+aic
+	+jcc
+	&:last-child
+		border-right: none
+	&:hover
+		background-color: $accent-color
+
+
+.header-site-links__item--active
+	background-color: $accent-color
+
+
+.beton__main
+	padding-top: 100px
+
+.article__container
+	margin: 0 auto
+	max-width: 800px
+
+
+.advantages-block
+	+flex
+	+fww
+
+.advantages-block--aic-jcsb
+	+aic
+	+jcsb
+
+.frame-block
+	width: 428px
+	height: 230px
+	+bgr
+	background-position: center center
+	background-image: url(../../img/frame-bg.png)
+	padding-top: 42px
+	padding-left: 40px
+	padding-right: 118px
+	padding-bottom: 45px
+	+flex
+	+fww
+	+acsb
+
+.advantages__h4
+	font-size: 16px
+	font-family: msc900
+	line-height: 1.2
+
+.advantages__text
+	font-size: 14px
+	line-height: 20px
+	font-family: msc300
+	margin-bottom: 0
+
+.advantages__title
+	max-width: 330px
+
+.advantages__overhead
+	font-size: 17px
+	font-family: msc100
+	margin-bottom: 18px
+
+.advantages__h3
+	font-family: msc900
+	font-size: 25px
+	text-decoration: underline
+	padding-bottom: 56px
+
+
+.advantages-block__items-wrap
+	+jcsb
+	padding-top: 76px
+
+.advantages-block.advantages-block__items-wrap.advantages-block__items--top-row
+	.advantages-block__item
+		flex: none
+		&:nth-child(1)
+			width: 216px
+		&:nth-child(2)
+			width: 186px
+		&:nth-child(3)
+			width: 242px
+
+.advantages-block__item__icon
+	margin-bottom: 22px
+
+.advantages-block__item__title
+	font-family: msc900
+	font-size: 15px
+	margin-bottom: 14px
+
+.advantages-block__item__text
+	font-family: msc100
+	font-size: 15px
+	line-height: 1.2
+
+.advantages-block__items-wrap--bottom-row
+	padding-top: 20px
+	padding-bottom: 66px
+	.advantages-block__item
+		margin-right: 36px
+		flex: none
+		&:nth-child(1)
+			width: 208px
+			margin-right: 86px
+		&:nth-child(2)
+			width: 315px
+
+
+// Секция прайс-листа
+
+.beton-price__h2
+	letter-spacing: 0.3px
+	text-transform: uppercase
+	font-family: Oswald-Bold
+	font-size: 30px
+	color: #fff
+	text-align: center
+	padding-top: 60px
+	margin-bottom: 52px
+	&:before
+		content: ''
+		display: block
+		margin: 0 auto 30px
+		width: 60px
+		height: 4px
+		background-color: $accent-color
+
+.beton-price__table
+	margin: 0 auto
+	width: 946px
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07)
+	background-color: #ffffff
+
+.price-table__top-row,.price-table__row
+	position: relative
+	width: 100%
+	padding: 0 70px
+	+flex
+	+jcsb
+	+aic
+	font-family: msc300
+	height: 70px
+
+.price-table__top-row
+	&:after
+		content: ''
+		display: block
+		height: 1px
+		background-color: #e8e8e8
+		position: absolute
+		bottom: 0
+		left: 70px
+		right: 70px
+
+.price-table__row
+	&:nth-child(2n+1)
+		background-color: #f6f6f6
+
+.price-table__row--bottom-line
+	&:after
+		content: ''
+		display: block
+		height: 1px
+		background-color: #e8e8e8
+		position: absolute
+		bottom: 0
+		left: 70px
+		right: 70px
+
+.price-table__column-title
+	display: block
+	width: 50%
+	flex: 1
+	font-family: msc900
+	&:first-child
+		flex: 2
+
+.price-table__row-value
+	display: block
+	width: 50%
+	flex: 1
+	font-family: msc300
+	&:first-child
+		flex: 2
+	
+.promotion-block
+	padding: 0 70px
+	height: 150px
+	+flex
+	+aic
+	+jcsb
+
+.promotion-block__text-block
+	width: 450px
+	border-left: 4px solid $accent-color
+	padding-left: 25px
+
+.promotion-block__h3
+	letter-spacing: 0.25px
+	font-size: 25px
+	font-family: msc900
+	line-height: 1.15
+	margin-bottom: 4px
+	margin-top: -2px
+
+.promotion-block__text
+	letter-spacing: 0.19px
+	font-size: 18px
+	font-family: msc900
+	margin-bottom: 0
+	line-height: 1.15
+	>span
+		color: $accent-color
+		>sup
+			font-size: 10px
+	>sup
+		font-size: 10px
+
+
+.assortiment__wrap
+	background-color: #f6f6f6
+	padding-top: 140px
+	padding-bottom: 56px
+
+.assortiment-block
+	margin: 0 auto
+	max-width: 946px
+
+.assortiment-block__h2
+	letter-spacing: 0.3px
+	font-size: 30px
+	font-family: msc900
+	line-height: 33px
+	padding-left: 52px
+	margin-bottom: 32px
+
+.assortiment__text-block
+	width: 630px
+	padding-left: 52px
+	padding-top: 34px
+	padding-right: 100px
+	padding-bottom: 34px
+	border: 10px solid $accent-color
+	position: relative
+	margin-bottom: 80px
+	>p
+		font-size: 15px
+		font-family: msc300
+		line-height: 29px
+		letter-spacing: 0.15px
+		>b
+			font-family: msc700
+
+.assortiment__text-block--last-p
+	margin-bottom: 0
+
+.assortiment__picture
+	top: -130px
+	right: -318px
+	position: absolute
+
+.assortiment-block__post-text
+	max-width: 534px
+	border-left: 4px solid $accent-color
+	margin: 0 auto
+	padding-left: 36px
+	height: 112px
+
+.assortiment-block__post-text__text
+	margin-bottom: 0
+	font-size: 20px
+	line-height: 29px
+	letter-spacing: 0.2px
+	font-family: msc700
+
+
+// Секция отзывов
+.testimoials-block
+	padding-top: 30px
+
+
+.testimoials__h2
+	letter-spacing: 0.3px
+	text-transform: uppercase
+	font-family: Oswald-Bold
+	font-size: 30px
+	text-align: center
+	padding-top: 60px
+	margin-bottom: 52px
+	&:before
+		content: ''
+		display: block
+		margin: 0 auto 30px
+		width: 60px
+		height: 4px
+		background-color: $accent-color
+
+.testimoials__wrap
+	padding-top: 10px
+	+flex
+	+jcsb
+
+
+.testimoials__item
+	position: relative
+	width: 360px
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07)
+	background-color: #ffffff
+	padding: 30px 30px 34px
+	+flex
+	+fww
+	+acsb
+	p
+		margin-bottom: 0
+
+.testimoials__picture
+	position: absolute
+	left: 30px
+	top: -22px
+
+.testimoials__h5
+	color: #b1b1b1
+	font-family: msc700
+	font-size: 15px
+	letter-spacing: 0.15px
+	margin-left: 100px
+	margin-bottom: 30px
+
+.testimoials__text-content
+	color: #010101
+	font-family: msc100
+	font-size: 14px
+	line-height: 24px
+	letter-spacing: 0.14px
+	margin-bottom: 26px
+
+.testimoials__name
+	color: #010101
+	font-family: msc700
+	font-size: 16px
+	letter-spacing: 0.16px
+
+.beton-price__table--centered
+	text-align: center
+	.price-table__column-title, .price-table__row-value
+		flex: none
+		width: 50%
